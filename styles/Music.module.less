@@ -1,0 +1,199 @@
+@import "colors.less";
+@import "functions.less";
+@import "fonts.less";
+
+.music_container{
+    background: #000;
+    position: relative;
+    .flex-display();
+    .align-items(center);
+    .justify-content(center);
+    .flex-direction(column);
+    margin: 0 auto;
+    width: calc(100% - 15px);
+    overflow: hidden;
+
+    .music_image{
+    }
+    .song_name{
+        .fonts(20px, 500, 30px, @AccentColor);
+        font-family: @FontFamily;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .artist_name{
+        .fonts(15px, 400, 30px, @PrimaryColor);
+        font-family: @FontFamily2;
+        text-align: center;
+    }
+    .player_container{
+        .flex-display();
+        .flex-direction(column);
+        .justify-content(center);
+        .align-items(center);
+    }
+    .play_button, .duration{
+        .flex-display();
+    }
+    .duration{
+        display: none;
+    }
+
+}
+
+.audioPlayer {
+    align-items: center;
+    display: flex;
+    .flex-direction(column);
+    }
+    
+    .forwardBackward {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 16px;
+    cursor: pointer;
+    color: @PrimaryColor;
+    }
+    
+    .forwardBackward:hover {
+        color: @PrimaryColor;
+    }
+    
+    .playPause {
+    background: @PrimaryColor;
+    border: none;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    font-size: 32px;
+    color: @SecondaryColor;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    &:hover{
+        cursor: pointer;
+    }
+    }
+    
+    .play {
+    position: relative;
+    left: 5px;
+    }
+    
+    .currentTime,
+    .duration {
+    font-family: monospace;
+    font-size: 16px;
+    color: @AccentColor;
+    }
+    
+    .currentTime {
+    margin-left: 25px;
+    color: @AccentColor;
+    }
+    
+    .progressBar {
+    --bar-bg: @AccentColor;
+    --seek-before-width: 0;
+    --seek-before-color: #144620;
+    --knobby: @PrimaryColor;
+    --selectedKnobby: #da3633;
+    
+    appearance: none;
+    background: var(--bar-bg);;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+    }
+    
+    /* progress bar - safari */
+    .progressBar::-webkit-slider-runnable-track {
+    background: var(--bar-bg);;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+    }
+    
+    /* progress bar - firefox */
+    .progressBar::-moz-range-track {
+    background: var(--bar-bg);;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    height: 11px;
+    outline: none;
+    }
+    
+    .progressBar::-moz-focus-outer {
+    border: 0;
+    }
+    
+    /* progress bar - chrome and safari */
+    .progressBar::before {
+    content: '';
+    height: 11px;
+    width: var(--seek-before-width);
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    }
+    
+    /* progress bar - firefox */
+    .progressBar::-moz-range-progress {
+    background-color: var(--seek-before-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 11px;
+    }
+    
+    /* knobby - chrome and safari */
+    .progressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--knobby);
+    cursor: pointer;
+    position: relative;
+    margin: -2px 0 0 0;
+    z-index: 3;
+    box-sizing: border-box;
+    }
+    
+    /* knobby while dragging - chrome and safari */
+    .progressBar:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+    background: var(--selectedKnobby);
+    }
+    
+    /* knobby - firefox */
+    .progressBar::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: transparent;
+    background-color: var(--knobby);
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+    }
+    
+    /* knobby while dragging - firefox */
+    .progressBar:active::-moz-range-thumb {
+    transform: scale(1.2);
+    background: var(--selectedKnobby);
+    }

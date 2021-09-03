@@ -1,0 +1,35 @@
+{
+  "name": "khuthy-sa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "PORT=4000 next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "material-ui-audio-player": "^1.6.6",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-cassette-player": "^1.1.2",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0",
+    "react-ig-feed": "^1.0.4",
+    "react-instagram-authless-feed": "github:jamesmoriarty/react-instagram-authless-feed",
+    "react-instagram-embed": "^3.0.0",
+    "react-reveal": "^1.2.2",
+    "react-slick": "^0.28.1",
+    "react-twitter-embed": "^3.0.3",
+    "react-typing-effect": "^2.0.5",
+    "react-youtube": "^7.13.1",
+    "slick-carousel": "^1.8.1",
+    "tabletop": "^1.6.3"
+  },
+  "devDependencies": {
+    "eslint": "7.30.0",
+    "eslint-config-next": "11.0.1"
+  }
+}

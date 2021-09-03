@@ -1,0 +1,44 @@
+@import "colors.less";
+@import "functions.less";
+@import "fonts.less";
+
+.contact_conatiner{
+    background: #000;
+    position: relative;
+    .flex-display();
+    .align-items(center);
+    .justify-content(center);
+    .flex-direction(column);
+    margin: 0 auto;
+    max-width: 800px;
+
+    .details{
+        .flex-display();
+        gap: 60px;
+        .detail_name{
+            text-transform: capitalize;
+            .fonts(20px, 400, 20px, @PrimaryColor);
+            font-family: @FontFamily;
+        }
+        .detail_value{
+            text-transform:capitalize;
+            .fonts(18px, 400, 20px, #fff);
+            font-family: @FontFamily; 
+        }
+        @media screen and (max-width: 900px) {
+            .flex-direction(column);
+        }
+    }
+
+    .derrick{
+        color: #fff;
+        margin-top: 60px;
+        text-align: center;
+        margin-bottom: 10px;
+        font-style: italic;
+        font-size: 14px;
+        .derrick_email{
+            color: @PrimaryColor;
+        }
+    }
+}
