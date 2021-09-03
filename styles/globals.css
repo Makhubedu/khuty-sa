@@ -139,7 +139,6 @@ a {
   box-sizing: border-box;
 }
 nav {
-  right: 50px;
   top: 0px;
   z-index: 9;
   position: fixed;
