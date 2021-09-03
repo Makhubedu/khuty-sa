@@ -18,7 +18,7 @@ const Header = () => {
                 />
             </div>
             <div className={styles.book_me}>
-                <Link href="mailto:lefaderrick@gmail.com" ><a>Book Me</a></Link>
+                <Link href="mailto:Khutygeegmail.com" ><a>Book Me</a></Link>
                 <Link href="https://www.youtube.com/channel/UCLax_DcoC7UY_6zhTQe0I_Q" ><a target="_blank" >Download My Hits</a></Link>
                 <Link href="#youtube" ><a>Watch Me Live</a></Link>
                 <Link href="#social" ><a>Follow me on Social Media</a></Link>
