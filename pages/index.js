@@ -25,7 +25,7 @@ export default function Home({ insta_token }) {
 export async function getStaticProps(){
   return{
     props : {
-      insta_token : process.env.INSTAGRAM_KEY
+      insta_token: process.env.INSTAGRAM_KEY
     }
   }
 }
